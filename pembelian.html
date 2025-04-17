@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Pembelian - Angel Shop</title>
+  <script>
+    function hitungTotal() {
+      let harga = parseFloat(document.getElementById("harga").value);
+      let jumlah = parseInt(document.getElementById("jumlah").value);
+      let total = harga * jumlah;
+      document.getElementById("total").value = total;
+    }
+  </script>
+</head>
+<body>
+  <h2>Form Pembelian Produk</h2>
+  <form>
+    <label>Nama Barang:</label><br><input type="text" id="barang"><br>
+    <label>Harga:</label><br><input type="number" id="harga"><br>
+    <label>Jumlah:</label><br><input type="number" id="jumlah"><br>
+    <label>Total Bayar:</label><br><input type="number" id="total" readonly><br><br>
+    <button type="button" onclick="hitungTotal()">Hitung Total</button>
+  </form>
+</body>
+</html>
