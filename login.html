@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Angel Shop</title>
+  <script>
+    function login() {
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+      if (user === "admin" && pass === "1234") {
+        alert("Login Berhasil!");
+        window.location.href = "../menu-utama/index.html";
+      } else {
+        alert("Login Gagal!");
+      }
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <h2>Login</h2>
+  <form onsubmit="return login()">
+    <label>Username:</label><br><input type="text" id="username"><br>
+    <label>Password:</label><br><input type="password" id="password"><br><br>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
